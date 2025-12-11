@@ -66,14 +66,14 @@ else {
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'AUTH_KEY',         'Y;SF~k[L(aR~6E[9MHo|FsSm*As7gq{+>Dv8(B=Flra<.u/Ckx[](&-zhpP91J?_' );
+define( 'SECURE_AUTH_KEY',  'o[!9y*@ZT&w0MC{kUD]ux,Gxw!L*7t+!+loO/e|Vm,X0QY8xf71$,.4Kyo{CyT>/' );
+define( 'LOGGED_IN_KEY',    'G.gZ G&TFiS{ r*~?2[OgX,rSEAzX5``<,8pD/&%pY~;[}zju1&Zz7GKa0M[H?t1' );
+define( 'NONCE_KEY',        '`c_e2j6eA9tuFsrnI#J(p$k.!2-=_H(xF+v`JCM!F8,jPsmdfEj8fvN>y=e{j^g@' );
+define( 'AUTH_SALT',        'uo+A!z[EhC/>M_K{WWS@7g5g.W#9^L7<M$$!7Ei9k.`Z(!{<<sD&CFL^CFA~sLuN' );
+define( 'SECURE_AUTH_SALT', 'hNMx|f=2Su_yW_)B?(<T7P(Nq] ##g81`wythJ-pl-8knn 6?Ks&(^ t:Q[*C_>(' );
+define( 'LOGGED_IN_SALT',   'yS};55?L/RUPTq]a:Xu5KOPZX>;QvQrnMSGj[C0:p{;%Z~Lc2+b!_n@3xGX${%`H' );
+define( 'NONCE_SALT',       't.A5`-HT=CXel*+Y@s9x`|G#dfT7J:%{Fk*dw7jXKC .Hx`1twOx.UeXTs0sBSDH' );
 
 /**#@-*/
 
@@ -83,7 +83,7 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = isset($_ENV['TABLE_PREFIX']) ? $_ENV['TABLE_PREFIX'] : 'wp_';
+$table_prefix = isset($_ENV['TABLE_PREFIX']) ? $_ENV['TABLE_PREFIX'] : 'xy_';
 
 /**
  * For developers: WordPress debugging mode.
