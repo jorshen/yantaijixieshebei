@@ -1,0 +1,49 @@
+# Translation of Plugins - WPJAM Basic - Development (trunk) in Chinese (China)
+# This file is distributed under the same license as the Plugins - WPJAM Basic - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-01-18 13:31:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Plugins - WPJAM Basic - Development (trunk)\n"
+
+#: extends/post-type-switcher.php:60
+msgid "Cancel"
+msgstr "取消"
+
+#: extends/post-type-switcher.php:59
+msgid "OK"
+msgstr "确定"
+
+#: extends/post-type-switcher.php:54
+msgid "Edit"
+msgstr "编辑"
+
+#. Author URI of the plugin
+#: wpjam-basic.php
+msgid "http://blog.wpjam.com/"
+msgstr "http://blog.wpjam.com/"
+
+#. Author of the plugin
+#: wpjam-basic.php
+msgid "Denis"
+msgstr "Denis"
+
+#. Description of the plugin
+#: wpjam-basic.php
+msgid "WPJAM 常用的函数和接口，屏蔽所有 WordPress 不常用的功能。"
+msgstr "WPJAM 常用的函数和接口，屏蔽所有 WordPress 不常用的功能。"
+
+#. Plugin URI of the plugin
+#: wpjam-basic.php
+msgid "https://blog.wpjam.com/project/wpjam-basic/"
+msgstr "https://blog.wpjam.com/project/wpjam-basic/"
+
+#. Plugin Name of the plugin
+#: wpjam-basic.php
+msgid "WPJAM BASIC"
+msgstr "WPJAM BASIC"

@@ -1,0 +1,2 @@
+<?php
+return ['x-generator'=>'GlotPress/4.0.3','translation-revision-date'=>'2020-01-18 13:31:16+0000','plural-forms'=>'nplurals=1; plural=0;','project-id-version'=>'Plugins - WPJAM Basic - Development (trunk)','language'=>'zh_CN','messages'=>['Cancel'=>'取消','OK'=>'确定','Edit'=>'编辑','http://blog.wpjam.com/'=>'http://blog.wpjam.com/','Denis'=>'Denis','WPJAM 常用的函数和接口，屏蔽所有 WordPress 不常用的功能。'=>'WPJAM 常用的函数和接口，屏蔽所有 WordPress 不常用的功能。','https://blog.wpjam.com/project/wpjam-basic/'=>'https://blog.wpjam.com/project/wpjam-basic/','WPJAM BASIC'=>'WPJAM BASIC']];
