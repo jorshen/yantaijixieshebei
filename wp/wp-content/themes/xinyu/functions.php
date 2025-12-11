@@ -53,22 +53,22 @@ function get_post_views ($post_id) {
     }
     echo number_format_i18n($count);
 }
-function set_post_views () {
-    global $post;
-    $post_id = $post -> ID;
-    $count_key = 'views';
-    $count = get_post_meta($post_id, $count_key, true);
-    if (is_single() || is_page()) {
-        if ($count == '') {
-            delete_post_meta($post_id, $count_key);
-            add_post_meta($post_id, $count_key, '0');
-        } else {
-            // update_post_meta($post_id, $count_key, $count + 1); // 修复刷新一次+2
-            update_post_meta($post_id, $count_key, $count);
-        }
-    }
-}
-add_action('get_header', 'set_post_views');
+// function set_post_views () {
+//     global $post;
+//     $post_id = $post -> ID;
+//     $count_key = 'views';
+//     $count = get_post_meta($post_id, $count_key, true);
+//     if (is_single() || is_page()) {
+//         if ($count == '') {
+//             delete_post_meta($post_id, $count_key);
+//             add_post_meta($post_id, $count_key, '0');
+//         } else {
+//             // update_post_meta($post_id, $count_key, $count + 1); // 修复刷新一次+2
+//             update_post_meta($post_id, $count_key, $count);
+//         }
+//     }
+// }
+// add_action('get_header', 'set_post_views');
 
 // 调用子分类
 function get_category_root_id($cat)
@@ -88,7 +88,7 @@ function get_current_category_id() {
 
 //为主题添加主题控制面板
 if( function_exists('acf_add_options_page') ) {
-	
+
 	acf_add_options_page(array(
 		'page_title' 	=> '全局设置',
 		'menu_title'	=> '全局设置',
@@ -96,19 +96,19 @@ if( function_exists('acf_add_options_page') ) {
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> '幻灯片',
 		'menu_title'	=> 'Slider',
 		'parent_slug'	=> 'theme-general-settings'
 	));
-	
+
 	acf_add_options_sub_page(array(
 		'page_title' 	=> '导航',
 		'menu_title'	=> 'Nav',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-	
+
 }
 
 
@@ -154,10 +154,10 @@ add_theme_support('post-thumbnails');
 
 	范例：
 	//当上传图片时，给我新生成一种尺寸的图片。尺寸为300*200, 压缩模式
-	add_image_size( 'cat-thumb', 300, 200, false ); 
+	add_image_size( 'cat-thumb', 300, 200, false );
 
 	// 当上传图片时，给我新生成一种尺寸的图片。尺寸为220*180, 裁剪模式
-	add_image_size( 'hom-thumb', 220, 180, true ); 
+	add_image_size( 'hom-thumb', 220, 180, true );
 */
 add_image_size( 'odethumb1', 400, 250, true );
 add_image_size( 'odethumb2', 400, 400, true );
@@ -190,59 +190,59 @@ function ssid_column($cols) {
 	$cols['ssid'] = 'ID';
 	return $cols;
 }
- 
+
 // 显示 ID
 function ssid_value($column_name, $id) {
 	if ($column_name == 'ssid')
 		echo $id;
 }
- 
+
 function ssid_return_value($value, $column_name, $id) {
 	if ($column_name == 'ssid')
 		$value = $id;
 	return $value;
 }
- 
-// 为 ID 这列添加css 
+
+// 为 ID 这列添加css
 function ssid_css() {
 ?>
 <style type="text/css">
 	#ssid { width: 50px; } /* Simply Show IDs */
 </style>
-<?php	
+<?php
 }
- 
+
 // 通过动作/过滤器输出各种表格和CSS
 function ssid_add() {
 	add_action('admin_head', 'ssid_css');
- 
+
 	add_filter('manage_posts_columns', 'ssid_column');
 	add_action('manage_posts_custom_column', 'ssid_value', 10, 2);
- 
+
 	add_filter('manage_pages_columns', 'ssid_column');
 	add_action('manage_pages_custom_column', 'ssid_value', 10, 2);
- 
+
 	add_filter('manage_media_columns', 'ssid_column');
 	add_action('manage_media_custom_column', 'ssid_value', 10, 2);
- 
+
 	add_filter('manage_link-manager_columns', 'ssid_column');
 	add_action('manage_link_custom_column', 'ssid_value', 10, 2);
- 
+
 	add_action('manage_edit-link-categories_columns', 'ssid_column');
 	add_filter('manage_link_categories_custom_column', 'ssid_return_value', 10, 3);
- 
+
 	foreach ( get_taxonomies() as $taxonomy ) {
-		add_action("manage_edit-${taxonomy}_columns", 'ssid_column');			
+		add_action("manage_edit-${taxonomy}_columns", 'ssid_column');
 		add_filter("manage_${taxonomy}_custom_column", 'ssid_return_value', 10, 3);
 	}
- 
+
 	add_action('manage_users_columns', 'ssid_column');
 	add_filter('manage_users_custom_column', 'ssid_return_value', 10, 3);
- 
+
 	add_action('manage_edit-comments_columns', 'ssid_column');
 	add_action('manage_comments_custom_column', 'ssid_value', 10, 2);
 }
- 
+
 add_action('admin_init', 'ssid_add');
 
 //分类描述使用编辑器
