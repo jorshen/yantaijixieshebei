@@ -20,40 +20,22 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-if (isset($_ENV['DATABASE'])) {
-  define( 'DB_NAME', $_ENV['DATABASE'] );
-}
+define( 'DB_NAME', 'ytjxsb' );
 
 /** Database username */
-if (isset($_ENV['USERNAME'])) {
-  define( 'DB_USER', $_ENV['USERNAME'] );
-}
+define( 'DB_USER', 'Tx9dGdeNJ3jWGij.root' );
 
 /** Database password */
-if (isset($_ENV['PASSWORD'])) {
-  define( 'DB_PASSWORD', $_ENV['PASSWORD'] );
-}
+define( 'DB_PASSWORD', 'RsYMcEvaUL0vLwL2' );
 
 /** Database hostname */
-if (isset($_ENV['HOST'])) {
-  define( 'DB_HOST', $_ENV['HOST'] );
-}
+define( 'DB_HOST', 'gateway01.ap-northeast-1.prod.aws.tidbcloud.com' );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
-if (isset($_ENV['DB_COLLATE'])) {
-  define( 'DB_COLLATE', $_ENV['DB_COLLATE'] );
-}
-else {
-  if (isset($_ENV['HOST']) && str_contains($_ENV['HOST'], 'tidbcloud.com')) {
-    define ( 'DB_COLLATE', 'utf8mb4_general_ci');
-  }
-  else {
-    define( 'DB_COLLATE', '' );
-  }
-}
+define( 'DB_COLLATE', '' );
 
 /**#@+
  * Authentication unique keys and salts.
@@ -83,7 +65,7 @@ define( 'NONCE_SALT',       't.A5`-HT=CXel*+Y@s9x`|G#dfT7J:%{Fk*dw7jXKC .Hx`1twO
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = isset($_ENV['TABLE_PREFIX']) ? $_ENV['TABLE_PREFIX'] : 'xy_';
+$table_prefix = 'xy_';
 
 /**
  * For developers: WordPress debugging mode.
