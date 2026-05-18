@@ -22,8 +22,8 @@
   ],
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs20.x",
-      "includeFiles": "wp/**",
+      "runtime": "@vercel/node",
+      "includeFiles": ["wp/**"],
       "maxDuration": 60
     }
   },
